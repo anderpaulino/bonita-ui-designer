@@ -1,7 +1,7 @@
 <div class="row">
     <label
         ng-if="!properties.labelHidden"
-        ng-class="{ 'widget-label-horizontal': !properties.labelHidden && properties.labelPosition === 'left'}"
+        ng-class="{ 'widget-label-horizontal': !properties.labelHidden && properties.labelPosition === 'left', 'label--required': properties.required }"
         class="col-xs-{{ !properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 12 }}">
         {{ properties.label }}
     </label>
@@ -12,7 +12,7 @@
             class="form-control"
             placeholder="{{ properties.placeholder }}"
             ng-model="properties.value"
-            ng-readonly="properties.readOnly">
+            ng-readonly="properties.readOnly"
+            ng-required="properties.required">
     </div>
-
 </div>
