@@ -27,6 +27,6 @@
     display: inline-block;
 }
 
-.ng-invalid {
+input .ng-invalid.ng-dirty {
     border: 1px solid #F00 !important;
 }
