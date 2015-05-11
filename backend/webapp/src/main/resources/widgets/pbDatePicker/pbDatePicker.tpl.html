@@ -2,7 +2,7 @@
     <label ng-if="!properties.labelHidden"
            ng-class="{ 'widget-label-horizontal': !properties.labelHidden && properties.labelPosition === 'left', 'label--required': properties.required}"
            class="col-xs-{{ !properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 12 }}">
-        {{ properties.label }}
+        {{ properties.label }} <span class="text-danger" ng-if="properties.required"> *</span>
     </label>
 
     <div class="col-xs-{{ 12 - (!properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 0) }}">
